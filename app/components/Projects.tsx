@@ -15,7 +15,7 @@ const projects: Project[] = [
       "A real-time 3D maze navigation game built on OpenGL 3.3 Core with custom GLSL shaders, dynamic lighting, and a borderless fullscreen renderer.",
     tags: ["C++", "OpenGL", "GLSL", "GLFW", "CMake"],
     accent: "from-purple to-pink",
-    href: "https://github.com/legendmyth421-coder",
+    href: "https://github.com/legendmyth421-coder/3d-maze-game",
   },
   {
     title: "Go-Back-N Reliable Transfer",
@@ -23,7 +23,7 @@ const projects: Project[] = [
       "A reliable file transfer protocol over UDP implementing Go-Back-N ARQ with sliding windows, timeouts, and packet-level retransmission.",
     tags: ["Python", "UDP", "Sockets", "Protocols"],
     accent: "from-cyan to-green",
-    href: "https://github.com/legendmyth421-coder",
+    href: "https://github.com/legendmyth421-coder/gbn-reliable-transfer",
   },
   {
     title: "Log Analysis Security Agent",
@@ -31,7 +31,7 @@ const projects: Project[] = [
       "An automated security agent that ingests and analyzes system logs to detect suspicious patterns and surface potential threats.",
     tags: ["Python", "Security", "Automation", "Logging"],
     accent: "from-orange to-pink",
-    href: "https://github.com/legendmyth421-coder",
+    href: "https://github.com/legendmyth421-coder/security-agent",
   },
   {
     title: "Multi-Threaded CGI Web Server",
@@ -39,7 +39,7 @@ const projects: Project[] = [
       "A cross-platform, multi-threaded HTTP web server with CGI support, built from the ground up in C++ with raw socket programming.",
     tags: ["C++", "HTTP", "CGI", "Threads", "Sockets"],
     accent: "from-purple to-cyan",
-    href: "https://github.com/legendmyth421-coder",
+    href: "https://github.com/legendmyth421-coder/webserver",
   },
   {
     title: "CO2 Emissions Visualization",
@@ -47,7 +47,7 @@ const projects: Project[] = [
       "An interactive data visualization dashboard exploring global CO2 emission trends with charted insights and a clean UI.",
     tags: ["Python", "Data Viz", "Charts"],
     accent: "from-green to-cyan",
-    href: "https://github.com/legendmyth421-coder",
+    href: "https://github.com/legendmyth421-coder/co2-viz",
   },
   {
     title: "ScaleFinder (OOP)",

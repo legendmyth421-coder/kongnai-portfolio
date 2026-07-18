@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Temporary preview screenshots
+preview-*.png
+
+# OS junk
+Thumbs.db
+.DS_Store

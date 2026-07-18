@@ -1,50 +1,45 @@
+"use client";
+
 import Reveal from "./Reveal";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative px-6 py-28">
-      <div className="mx-auto max-w-4xl">
+    <section id="contact" className="relative py-28 px-6">
+      <div className="max-w-4xl mx-auto">
         <Reveal>
-          <div className="relative rounded-[2.5rem] overflow-hidden glass p-10 sm:p-16 text-center">
-            <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-purple/30 blur-3xl" />
-            <div className="absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-cyan/25 blur-3xl" />
-            <div className="relative">
-              <p className="font-mono text-sm text-orange">04 / Contact</p>
-              <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
-                Let&apos;s <span className="text-gradient">build something</span>
-              </h2>
-              <p className="mt-5 max-w-xl mx-auto text-foreground/65 text-lg leading-relaxed">
-                I&apos;m open to internships, collaboration, and interesting
-                conversations about systems, graphics, and networks. The fastest
-                way to reach me is GitHub.
-              </p>
+          <p className="text-sm font-mono text-purple uppercase tracking-[0.3em]">04 / Contact</p>
+          <h2 className="mt-4 text-4xl sm:text-5xl font-bold text-gradient">Let&apos;s build something</h2>
+        </Reveal>
 
-              <div className="mt-9 flex flex-wrap justify-center gap-4">
-                <a
-                  href="https://github.com/legendmyth421-coder"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white bg-gradient-to-r from-purple via-pink to-orange bg-[length:200%_auto] hover:bg-[position:100%_0] transition-all duration-500 shadow-lg shadow-pink/30"
-                >
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z" />
-                  </svg>
-                  GitHub
-                </a>
-                <a
-                  href="#top"
-                  className="px-7 py-3.5 rounded-full font-semibold glass glass-hover"
-                >
-                  Back to top
-                </a>
-              </div>
-            </div>
+        <Reveal delay={100}>
+          <p className="mt-8 text-lg text-white/70 max-w-2xl leading-relaxed">
+            I&apos;m open to internships, collaboration, and interesting conversations about systems, graphics, and networks. The fastest way to reach me is GitHub.
+          </p>
+        </Reveal>
+
+        <Reveal delay={200}>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a
+              href="https://github.com/legendmyth421-coder"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-white/5 border border-white/10 hover:border-purple/50 hover:bg-white/10 transition-all duration-300"
+            >
+              <span className="text-lg font-medium text-white">GitHub</span>
+              <svg className="w-5 h-5 text-purple group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            <a
+              href="/resume.pdf"
+              download
+              className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-purple to-pink hover:opacity-90 transition-opacity duration-300"
+            >
+              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span className="text-lg font-medium text-white">Download Resume</span>
+            </a>
           </div>
         </Reveal>
       </div>

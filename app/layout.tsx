@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Background from "./components/Background";
 import Footer from "./components/Footer";
 import ScrollProgress from "./components/ScrollProgress";
+import Loading from "./components/Loading";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+  icons: {
+    icon: "/favicon.svg",
+  },
   twitter: {
     card: "summary_large_image",
     title: "Kong Nai - Computer Science Portfolio",
@@ -48,6 +52,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col relative">
         <Background />
+        <Loading />
         <ScrollProgress />
         <Navbar />
         <main className="flex-1 relative z-10">{children}</main>

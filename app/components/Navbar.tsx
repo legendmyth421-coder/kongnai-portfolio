@@ -24,15 +24,16 @@ export default function Navbar() {
 
   return (
     <header
+      role="banner"
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
           ? "backdrop-blur-xl bg-background/70 border-b border-white/10"
           : "bg-transparent"
       }`}
     >
-      <nav className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#top" className="flex items-center gap-2 group">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-purple to-pink text-sm font-bold text-white">
+      <nav role="navigation" aria-label="Main navigation" className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+        <a href="#top" className="flex items-center gap-2 group" aria-label="Kong Nai - Home">
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-purple to-pink text-sm font-bold text-white" aria-hidden="true">
             KN
           </span>
           <span className="text-lg font-semibold tracking-tight text-white group-hover:text-gradient transition-colors">
@@ -45,7 +46,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-white/70 hover:text-white transition-colors"
+              className="text-sm text-white/70 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-purple focus:ring-offset-2 focus:ring-offset-background rounded"
             >
               {link.label}
             </a>
@@ -55,7 +56,8 @@ export default function Navbar() {
             href="https://github.com/legendmyth421-coder"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-purple/50 transition-all"
+            className="text-sm font-medium px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-purple/50 transition-all focus:outline-none focus:ring-2 focus:ring-purple"
+            aria-label="GitHub Profile (opens in new tab)"
           >
             GitHub
           </a>
@@ -63,10 +65,11 @@ export default function Navbar() {
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 rounded-lg bg-white/5 border border-white/10"
-          aria-label="Toggle menu"
+          className="md:hidden p-2 rounded-lg bg-white/5 border border-white/10 focus:outline-none focus:ring-2 focus:ring-purple"
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileOpen}
         >
-          <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             {mobileOpen ? (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             ) : (
@@ -77,14 +80,15 @@ export default function Navbar() {
       </nav>
 
       {mobileOpen && (
-        <div className="md:hidden border-t border-white/10 bg-background/95 backdrop-blur-xl">
+        <div className="md:hidden border-t border-white/10 bg-background/95 backdrop-blur-xl" role="menu">
           <div className="flex flex-col gap-2 px-6 py-4">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-sm text-white/70 hover:text-white py-2 transition-colors"
+                className="text-sm text-white/70 hover:text-white py-2 transition-colors focus:outline-none focus:ring-2 focus:ring-purple rounded"
+                role="menuitem"
               >
                 {link.label}
               </a>
@@ -95,7 +99,8 @@ export default function Navbar() {
                 href="https://github.com/legendmyth421-coder"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-medium px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
+                className="text-sm font-medium px-4 py-2 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all focus:outline-none focus:ring-2 focus:ring-purple"
+                aria-label="GitHub Profile (opens in new tab)"
               >
                 GitHub
               </a>
